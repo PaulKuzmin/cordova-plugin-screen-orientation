@@ -54,7 +54,13 @@ public class CDVOrientation extends CordovaPlugin {
         
         // Route the Action
         if (action.equals("screenOrientation")) {
-            return routeScreenOrientation(args, callbackContext);
+
+            try {
+                return routeScreenOrientation(args, callbackContext);
+            } catch (Exception e) {
+                callbackContext.error(e.getMessage());
+                return false;
+            }
         }
         
         // Action not found

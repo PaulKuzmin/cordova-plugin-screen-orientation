@@ -39,6 +39,9 @@ The plugin adds the following to the screen object (`window.screen`):
 // current orientation
 .orientation
 ```
+## My FIX
+
+In Android source added try/catch.
 
 ## Install
 
